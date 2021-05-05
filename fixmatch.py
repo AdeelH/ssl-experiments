@@ -247,7 +247,7 @@ def run():
     # sched = optim.lr_scheduler.CosineAnnealingLR(
     #     optimizer, T_max=train_params['epochs'], eta_min=0)
     sched = get_cosine_schedule_with_warmup(
-        optimizer, 0, train_params['epochs'] * len(train_dl_l))
+        optimizer, 0, train_params['epochs'] * len(train_dl_ul))
 
     train_fixmatch(
         model,
